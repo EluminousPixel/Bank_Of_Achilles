@@ -1,3 +1,5 @@
 account_Name_1 = 0537834
-mortgage = £1,245.72
-moneyInBank = 300
+moneyInBank_1 = 300
+
+account_Name_2 = 0314768
+moneyInBank_2 = £700

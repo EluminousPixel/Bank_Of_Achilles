@@ -17,7 +17,7 @@ public class Bank_Of_Achilles {
 
         while (cal) {
             System.out.println("Welcome to the Bank Of Achilles: Mortgage Calculator");
-            System.out.println("Please Type 1 for Mortgage Calculator or 2 for Money Transactions");
+            System.out.println("Please Type:\n 1- Mortgage Calculator\n 2- Money Transactions");
             int userInput = input.nextInt();
             
             if (userInput == 1) {
@@ -86,6 +86,12 @@ public class Bank_Of_Achilles {
                     
                     }       
                 } 
+
+            }
+
+            if(userInput == 3) {
+                System.out.println("Please enter account number: ");
+                long account_Name_1 = input.nextLong();
 
             }
                       
