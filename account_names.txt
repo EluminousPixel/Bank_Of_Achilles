@@ -1,0 +1,3 @@
+account_Name_1 = 0537834
+mortgage = £1,245.72
+moneyInBank = 300
