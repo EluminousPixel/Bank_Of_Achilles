@@ -64,7 +64,7 @@ public class Bank_Of_Achilles {
                     if (transactionOption == 1) {
                         System.out.println("You have " + moneyInBank + " how much would you like to take out? (note limmit is 300)"); 
                         int moneyOut = input.nextInt();
-                        while(moneyOut >= 300) {
+                        while(moneyOut > 301) {
                             System.out.println("// Error Please Enter Amount Again //\n");
                             moneyOut = input.nextInt();  
                         }
@@ -76,7 +76,7 @@ public class Bank_Of_Achilles {
                     if (transactionOption == 2) {
                         System.out.println("You have " + moneyInBank + " how much money would you\nlike to put in (note limit is 300)");
                         int moneyIn = input.nextInt();
-                        while(moneyIn >= 300) {
+                        while(moneyIn > 301) {
                             System.out.println("// Error Please Enter Amount Again //\n");
                             moneyIn = input.nextInt();
                         }
