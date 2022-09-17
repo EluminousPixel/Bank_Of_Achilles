@@ -1,9 +1,11 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class Bank_Of_Achilles {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         final byte Months_In_A_Year = 12;
         final byte Percent = 100;
         long principal = 0;
@@ -11,12 +13,27 @@ public class Bank_Of_Achilles {
         int numberOfPayments = 0;
         int moneyInBank = 0;
         boolean cal = true;
+        boolean account = true;
 
         Scanner input = new Scanner(System.in);
 
+        while(account) {
+            System.out.println("Welcome to the Bank Of Achilles: Mortgage Calculator");
+            System.out.println("Please select a choice\n 1- Log-In\n 2- Guest");
+            int userInput_2 = input.nextInt();
+
+            if(userInput_2 == 1) {
+                File file = new File("J:/Java/Bank Of Achilles/Bank_Of_Achilles");
+                Scanner scan = new Scanner(file);
+                
+            }
+
+
+        }
+
+
 
         while (cal) {
-            System.out.println("Welcome to the Bank Of Achilles: Mortgage Calculator");
             System.out.println("Please Type:\n 1- Mortgage Calculator\n 2- Money Transactions");
             int userInput = input.nextInt();
             
