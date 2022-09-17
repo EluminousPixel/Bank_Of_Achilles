@@ -14,6 +14,7 @@ public class Bank_Of_Achilles {
         int moneyInBank = 0;
         boolean cal = true;
         boolean account = true;
+        long fileContent = 0;
 
         Scanner input = new Scanner(System.in);
 
@@ -25,6 +26,11 @@ public class Bank_Of_Achilles {
             if(userInput_2 == 1) {
                 File file = new File("J:/Java/Bank Of Achilles/Bank_Of_Achilles");
                 Scanner scan = new Scanner(file);
+                while(fileContent == 0537834) 
+                
+                
+                System.out.println("Please enter your username: ");
+
                 
             }
 
