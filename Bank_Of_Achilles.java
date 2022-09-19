@@ -14,22 +14,47 @@ public class Bank_Of_Achilles {
         int moneyInBank = 0;
         boolean cal = true;
         boolean account = true;
-        long fileContent = 0;
 
         Scanner input = new Scanner(System.in);
 
         while(account) {
             System.out.println("Welcome to the Bank Of Achilles: Mortgage Calculator");
             System.out.println("Please select a choice\n 1- Log-In\n 2- Guest");
-            int userInput_2 = input.nextInt();
+            long userInput_2 = input.nextLong();
 
             if(userInput_2 == 1) {
-                File file = new File("J:/Java/Bank Of Achilles/Bank_Of_Achilles");
-                Scanner scan = new Scanner(file);
-                while(fileContent == 0537834) 
-                
-                
+                Scanner scan;
+
+                openFile(); {
+                    try {
+                        scan = new Scanner(new File ("account_names.txt"));
+                    }
+                    catch(Exception e) {
+                        System.out.println("could not find file");
+                    }
+                }
                 System.out.println("Please enter your username: ");
+                Boolean userInput_3 = input.nextBoolean();
+                while(userInput_3 = scan.nextLine() != "0537") {
+                    System.out.println("This is not your username, please try again");
+                    userInput_3 = input.nextBoolean();
+                }
+                System.out.println("Welcome to your account number 0537\n Here is your account info:");
+                readFile(); {
+                    while(scan.hasNext()) {
+                        String a = scan.next();
+                        String b = scan.next();
+                        String c = scan.next();
+
+                        System.out.printf("%s %s %s", a, b, c);
+                    }
+
+                }
+                
+                closeFile(); {
+                    scan.close();
+                }
+
 
                 
             }
@@ -121,6 +146,15 @@ public class Bank_Of_Achilles {
         }
         input.close();
 
-    }        
+    }
+
+    private static void openFile() {
+    }
+
+    private static void readFile() {
+    }
+
+    private static void closeFile() {
+    }
 
 }
