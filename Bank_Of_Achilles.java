@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class Bank_Of_Achilles {
 
+    private static Scanner scan;
+
     public static void main(String[] args) throws FileNotFoundException {
         final byte Months_In_A_Year = 12;
         final byte Percent = 100;
@@ -23,8 +25,7 @@ public class Bank_Of_Achilles {
             long userInput_2 = input.nextLong();
 
             if(userInput_2 == 1) {
-                Scanner scan;
-
+                
                 openFile(); {
                     try {
                         scan = new Scanner(new File ("account_names.txt"));
@@ -41,7 +42,7 @@ public class Bank_Of_Achilles {
                 }
                 System.out.println("Welcome to your account number 0537\n Here is your account info:");
                 readFile(); {
-                    while(scan.hasNext()) {
+                    while(scan.nextLine() != null) {
                         String a = scan.next();
                         String b = scan.next();
                         String c = scan.next();
@@ -56,10 +57,10 @@ public class Bank_Of_Achilles {
                 }
 
 
-                
+             
             }
 
-
+        break;
         }
 
 
