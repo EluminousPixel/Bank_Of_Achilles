@@ -38,7 +38,7 @@ public class Bank_Of_Achilles {
                     }
                 }
                 System.out.println("Please enter your username: ");
-                Boolean userInput_3 = input.nextBoolean();
+                boolean userInput_3 = input.nextBoolean();
                 while(userInput_3 = scan.nextLine() != "0537") {
                     System.out.println("This is not your username, please try again");
                     userInput_3 = input.nextBoolean();
