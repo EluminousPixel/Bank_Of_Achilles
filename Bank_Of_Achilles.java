@@ -28,7 +28,8 @@ public class Bank_Of_Achilles {
                 
                 openFile(); {
                     try {
-                        scan = new Scanner(new File ("J:/Java/Bank Of Achilles/Bank_Of_Achilles/account_names.txt"));
+                        File file = new File ("J:/Java/Bank Of Achilles/Bank_Of_Achilles/account_names.txt");
+                        scan = new Scanner(file);
                     }
                     catch(Exception e) {
                         System.out.println("could not find file");
@@ -65,9 +66,8 @@ public class Bank_Of_Achilles {
         break;
         }
 
-
-
         while (cal) {
+
             System.out.println("Please Type:\n 1- Mortgage Calculator\n 2- Money Transactions");
             int userInput = input.nextInt();
             
