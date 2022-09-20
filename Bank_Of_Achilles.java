@@ -28,10 +28,12 @@ public class Bank_Of_Achilles {
                 
                 openFile(); {
                     try {
-                        scan = new Scanner(new File ("account_names.txt"));
+                        scan = new Scanner(new File ("J:/Java/Bank Of Achilles/Bank_Of_Achilles/account_names.txt"));
                     }
                     catch(Exception e) {
                         System.out.println("could not find file");
+                        System.out.println("You are now in guest account");
+                        break;
                     }
                 }
                 System.out.println("Please enter your username: ");
