@@ -20,7 +20,7 @@ public class Bank_Of_Achilles {
         Scanner input = new Scanner(System.in);
 
         while(account) {
-            System.out.println("Welcome to the Bank Of Achilles: Mortgage Calculator");
+            System.out.println("Welcome to the Bank Of Achilles");
             System.out.println("Please select a choice\n 1- Log-In\n 2- Guest");
             long userInput_2 = input.nextLong();
 
@@ -28,7 +28,7 @@ public class Bank_Of_Achilles {
                 
                 openFile(); {
                     try {
-                        File file = new File ("J:/Java/Bank Of Achilles/Bank_Of_Achilles/account_names.txt");
+                        File file = new File ("account_names.txt");
                         scan = new Scanner(file);
                     }
                     catch(Exception e) {
@@ -38,19 +38,19 @@ public class Bank_Of_Achilles {
                     }
                 }
                 System.out.println("Please enter your username: ");
-                boolean userInput_3 = input.nextBoolean();
-                while(userInput_3 = scan.nextLine() != "0537") {
+                input.next();
+                while(scan.nextLine() == null) {
                     System.out.println("This is not your username, please try again");
-                    userInput_3 = input.nextBoolean();
+                    input.next();
                 }
-                System.out.println("Welcome to your account number 0537\n Here is your account info:");
+                System.out.println("Welcome to your account number 0537\nHere is your account info:");
                 readFile(); {
-                    while(scan.nextLine() != null) {
+                    while(scan.hasNext()) {
                         String a = scan.next();
                         String b = scan.next();
-                        String c = scan.next();
 
-                        System.out.printf("%s %s %s", a, b, c);
+                        System.out.printf("%s %s\n" , a, b);
+                        
                     }
 
                 }
@@ -58,14 +58,19 @@ public class Bank_Of_Achilles {
                 closeFile(); {
                     scan.close();
                 }
-
+               
 
              
             }
 
-        break;
+            if(userInput_2 == 2) {
+                System.out.println("You are now in guest account");
+                break;
+            }
+            break;
         }
 
+        
         while (cal) {
 
             System.out.println("Please Type:\n 1- Mortgage Calculator\n 2- Money Transactions");
@@ -110,8 +115,11 @@ public class Bank_Of_Achilles {
 
             if (userInput == 2) {
                 while (true) {
-                    System.out.println("Please select 1 - to take money out and 2 - to put money in."); 
-                    int transactionOption = input.nextInt();        
+                    System.out.println("Please select:\n 1- Money out\n 2- Money in"); 
+                    int transactionOption = input.nextInt();
+                    if(userInput == 3) {
+                        System.exit(0);
+                    }      
                     if (transactionOption == 1) {
                         System.out.println("You have " + moneyInBank + " how much would you like to take out? (note limmit is 300)"); 
                         int moneyOut = input.nextInt();
@@ -121,7 +129,7 @@ public class Bank_Of_Achilles {
                         }
                         moneyInBank = moneyInBank - moneyOut;
                         System.out.print("You now have " + moneyInBank + "\nThank you come again :)\n");
-                    }  
+                    }
 
 
                     if (transactionOption == 2) {
@@ -141,10 +149,9 @@ public class Bank_Of_Achilles {
             }
 
             if(userInput == 3) {
-                System.out.println("Please enter account number: ");
-                long account_Name_1 = input.nextLong();
-
+                System.exit(0);
             }
+
                       
         }
         input.close();
