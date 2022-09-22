@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Scanner;
 
@@ -46,11 +47,12 @@ public class Bank_Of_Achilles {
                 }
                 System.out.println("Welcome to your account number 0537\nHere is your account info:");
                 readFile(); {
+
                     while(scan.hasNext()) {
                         String a = scan.next();
                         String b = scan.next();
 
-                        System.out.printf("%s %s\n" , a, b);
+                        System.out.printf("%s £%s\n", a, b);
                         
                     }
 
@@ -122,26 +124,26 @@ public class Bank_Of_Achilles {
                     System.out.println("Please select:\n 1- Money out\n 2- Money in\n 3- Exit"); 
                     int transactionOption = input.nextInt();
                     if (transactionOption == 1) {
-                        System.out.println("You have " + moneyInBank + " how much would you like to take out? (note limmit is 300)"); 
+                        System.out.println("You have " + "£" + moneyInBank + " how much would you like to take out? (note limmit is 300)"); 
                         int moneyOut = input.nextInt();
                         while(moneyOut > 301) {
                             System.out.println("// Error Please Enter Amount Again //\n");
                             moneyOut = input.nextInt();  
                         }
                         moneyInBank = moneyInBank - moneyOut;
-                        System.out.print("You now have " + moneyInBank + "\nThank you come again :)\n");
+                        System.out.print("You now have " + "£" + moneyInBank + "\nThank you come again :)\n");
                     }
 
 
                     if (transactionOption == 2) {
-                        System.out.println("You have " + moneyInBank + " how much money would you\nlike to put in (note limit is 300)");
+                        System.out.println("You have " + "£" + moneyInBank + " how much money would you\nlike to put in (note limit is 300)");
                         int moneyIn = input.nextInt();
                         while(moneyIn > 301) {
                             System.out.println("// Error Please Enter Amount Again //\n");
                             moneyIn = input.nextInt();
                         }
                         moneyInBank =  moneyInBank + moneyIn;
-                        System.out.print("You now have " + moneyInBank + "\nThank you come again :)\n");        
+                        System.out.print("You now have " + "£" + moneyInBank + "\nThank you come again :)\n");        
 
                     
                     }
