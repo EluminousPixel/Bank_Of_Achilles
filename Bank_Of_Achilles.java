@@ -21,8 +21,9 @@ public class Bank_Of_Achilles {
 
         while(account) {
             System.out.println("Welcome to the Bank Of Achilles");
-            System.out.println("Please select a choice\n 1- Log-In\n 2- Guest");
-            long userInput_2 = input.nextLong();
+            System.out.println("Please select a choice\n 1- Log-In\n 2- Guest\n 3- Exit");
+            long userInput_2 = input.nextLong(); 
+
 
             if(userInput_2 == 1) {
                 
@@ -67,13 +68,16 @@ public class Bank_Of_Achilles {
                 System.out.println("You are now in guest account");
                 break;
             }
+            if(userInput_2 == 3) {
+                System.exit(0);
+            } 
             break;
         }
 
         
         while (cal) {
 
-            System.out.println("Please Type:\n 1- Mortgage Calculator\n 2- Money Transactions");
+            System.out.println("Please Type:\n 1- Mortgage Calculator\n 2- Money Transactions\n 3- Exit");
             int userInput = input.nextInt();
             
             if (userInput == 1) {
@@ -115,11 +119,8 @@ public class Bank_Of_Achilles {
 
             if (userInput == 2) {
                 while (true) {
-                    System.out.println("Please select:\n 1- Money out\n 2- Money in"); 
+                    System.out.println("Please select:\n 1- Money out\n 2- Money in\n 3- Exit"); 
                     int transactionOption = input.nextInt();
-                    if(userInput == 3) {
-                        System.exit(0);
-                    }      
                     if (transactionOption == 1) {
                         System.out.println("You have " + moneyInBank + " how much would you like to take out? (note limmit is 300)"); 
                         int moneyOut = input.nextInt();
@@ -143,7 +144,11 @@ public class Bank_Of_Achilles {
                         System.out.print("You now have " + moneyInBank + "\nThank you come again :)\n");        
 
                     
-                    }       
+                    }
+                    if(transactionOption == 3) {
+                        System.exit(0);
+                    }
+                         
                 } 
 
             }
