@@ -44,7 +44,7 @@ public class Bank_Of_Achilles {
                     System.out.println("This is not your username, please try again");
                     input.next();
                 }
-                System.out.println("Welcome to your account number 0537\nHere is your account info:");
+                System.out.println("Welcome to your account\nHere is your account info:");
                 readFile(); {
 
                     while(scan.hasNext()) {
@@ -60,7 +60,14 @@ public class Bank_Of_Achilles {
                 closeFile(); {
                     scan.close();
                 }
-               
+                System.out.println("What would you like to do now?\n 1- Exit \n 2- Mortgage Calculator & Money Transactions");
+                int userInput_3 = input.nextInt();
+                if(userInput_3 == 1) {
+                    System.exit(0);
+                }
+                if(userInput_3 == 2) {
+                    break;
+                }
 
              
             }
