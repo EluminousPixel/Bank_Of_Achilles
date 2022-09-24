@@ -47,7 +47,7 @@ public class Bank_Of_Achilles {
                 System.out.println("Welcome to your account\nHere is your account info:");
                 readFile(); {
 
-                    while(scan.nextLine() != null) {
+                    while(scan.hasNext()) {
                         String a = scan.next();
                         String b = scan.next();
 

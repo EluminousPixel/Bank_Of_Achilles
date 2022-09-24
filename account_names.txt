@@ -1,7 +1,3 @@
 AccountName: 0537
 Mortgage: 1,345.67
 MoneyInBank: 400
-
-AccountName: 0284
-Mortgage: 1,815.42
-MoneyInBank: 387
