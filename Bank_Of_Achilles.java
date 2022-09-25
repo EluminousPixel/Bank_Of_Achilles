@@ -51,25 +51,29 @@ public class Bank_Of_Achilles {
                         String a = scan.next();
                         String b = scan.next();
 
-                        System.out.printf("%s £%s\n", a, b);
-                        
-                    }
+                        if(scan.nextLine() == "//////////////////") {
+                            break;
+                        }
 
-                }
+                        System.out.printf("%s £%s\n", a, b);
+                    
+                    }
+                  
+                System.out.println("What would you like to do now?\n 1- Exit \n 2- Mortgage Calculator & Money Transactions");
+                int userInput_3 = input.nextInt();
+                    if(userInput_3 == 1) {
+                        System.exit(0);
+                    }
+                    if(userInput_3 == 2) {
+                        break;
+                    }
                 
+                }
+
                 closeFile(); {
                     scan.close();
                 }
-                System.out.println("What would you like to do now?\n 1- Exit \n 2- Mortgage Calculator & Money Transactions");
-                int userInput_3 = input.nextInt();
-                if(userInput_3 == 1) {
-                    System.exit(0);
-                }
-                if(userInput_3 == 2) {
-                    break;
-                }
 
-             
             }
 
             if(userInput_2 == 2) {
