@@ -29,8 +29,7 @@ public class Bank_Of_Achilles {
                 
                 openFile(); {
                     try {
-                        File file = new File ("account_names.txt");
-                        scan = new Scanner(file);
+                        scan = new Scanner(new File("account_names.txt"));
                     }
                     catch(Exception e) {
                         System.out.println("could not find file");
