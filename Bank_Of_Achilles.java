@@ -7,7 +7,7 @@ public class Bank_Of_Achilles {
 
     private static Scanner scan;
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         final byte Months_In_A_Year = 12;
         final byte Percent = 100;
         long principal = 0;
