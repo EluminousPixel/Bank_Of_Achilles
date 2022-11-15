@@ -1,5 +1,4 @@
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.text.NumberFormat;
 import java.util.Scanner;
 
@@ -46,15 +45,15 @@ public class Bank_Of_Achilles {
                 System.out.println("Welcome to your account\nHere is your account info:");
                 readFile(); {
 
-                   scan.nextLine();
-                        String a = scan.next();
-                        String b = scan.next();
-
-                        System.out.printf("%s £%s\n", a, b); 
-                    
-                    while(scan.nextLine() == "//////////////////") {
-                        break;
-                    }
+                while(scan.nextLine() != null); {
+                    String a = scan.next();
+                    String b = scan.next();
+                        System.out.printf("%s £%s\n", a, b);
+                } 
+                         
+                while(scan.nextLine() == "//////////////////") {
+                    break;
+                }
 
 
                 System.out.println("What would you like to do now?\n 1- Exit \n 2- Mortgage Calculator & Money Transactions");
