@@ -45,15 +45,19 @@ public class Bank_Of_Achilles {
                 System.out.println("Welcome to your account\nHere is your account info:");
                 readFile(); {
 
-                while(scan.nextLine() != null); {
+                scan.nextLine(); 
                     String a = scan.next();
                     String b = scan.next();
-                        System.out.printf("%s £%s\n", a, b);
-                } 
-                         
-                while(scan.nextLine() == "//////////////////") {
+                    System.out.printf("%s £%s\n", a, b);
+                
+                scan.nextLine(); 
+                    String c = scan.next();
+                    String d = scan.next();
+                    System.out.printf("%s £%s\n", c, d);
+                    
+
+                if(scan.nextLine() == null)
                     break;
-                }
 
 
                 System.out.println("What would you like to do now?\n 1- Exit \n 2- Mortgage Calculator & Money Transactions");
