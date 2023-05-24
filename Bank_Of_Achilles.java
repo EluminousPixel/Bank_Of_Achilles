@@ -37,7 +37,8 @@ public class Bank_Of_Achilles {
                     }
                 }
                 System.out.println("Please enter your username: ");
-                input.next();
+                String num = input.next();
+                if(scan.nextLine() == "AccountName:" + num);
                 while(scan.nextLine() == null) {
                     System.out.println("This is not your username, please try again");
                     input.next();
